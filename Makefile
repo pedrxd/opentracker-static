@@ -44,8 +44,8 @@ FEATURES+=-DWANT_FULLSCRAPE
 OPTS_debug=-D_DEBUG -g -ggdb # -pg -fprofile-arcs -ftest-coverage
 OPTS_production=-O3
 
-CFLAGS+=-I$(LIBOWFAT_HEADERS) -Wall -pipe -Wextra #-ansi -pedantic
-LDFLAGS+=-L$(LIBOWFAT_LIBRARY) -lowfat -pthread -lpthread -lz
+CFLAGS+=-I$(LIBOWFAT_HEADERS) -static -Wall -pipe -Wextra #-ansi -pedantic
+LDFLAGS+=-L$(LIBOWFAT_LIBRARY) -static -lowfat -pthread -lpthread -lz
 
 BINARY =opentracker
 HEADERS=trackerlogic.h scan_urlencoded_query.h ot_mutex.h ot_stats.h ot_vector.h ot_clean.h ot_udp.h ot_iovec.h ot_fullscrape.h ot_accesslist.h ot_http.h ot_livesync.h ot_rijndael.h
